@@ -1,7 +1,11 @@
+@import './vars.scss';
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
+  font-family: $text-font;
+  color: $primaryBlack-color;
 }
