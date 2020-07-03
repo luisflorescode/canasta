@@ -1,0 +1,14 @@
+@import '../main.scss';
+
+.products-section {
+  &__sorting {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 92%;
+    max-width: calc(1440px * .92);
+    margin: 15px auto;
+    margin-bottom: 0;
+  }
+}

@@ -1,7 +1,9 @@
 @import '../main.scss';
 
 .page-selector {
-  margin: 0 5px;
+  &__text {
+    padding: 0 10px;
+  }
 
   &__text:hover {
     cursor: pointer;
@@ -9,7 +11,10 @@
   }
 
   &__text--actual {
+    padding: 0 10px;
     color: $primary-color;
     font-weight: bold;
+    background-color: $white-color;
+    border: 1px solid $grey-color;
   }
 }

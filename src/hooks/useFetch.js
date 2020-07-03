@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 
-const useFetch = (link) => {
+const useFetch = (url) => {
   const isMounted = useRef(true);
   const [state, setState] = useState({
     data: null,
@@ -19,29 +19,20 @@ const useFetch = (link) => {
     const getData = async () => {
       try {
         setState({ data: null, loading: true, error: null });
-        const url = `${link}`;
         const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
         const response = await fetch(proxyUrl + url);
         const data = await response.json();
 
         if (isMounted.current) {
-          setState({
-            data,
-            loading: false,
-            error: null,
-          });
+          setState({ data, loading: false, error: null });
         }
       } catch (error) {
-        setState({
-          data: null,
-          loading: false,
-          error,
-        });
+        setState({ data: null, loading: false, error });
       }
     };
 
     getData();
-  }, [link]);
+  }, [url]);
 
   return state;
 };

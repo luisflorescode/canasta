@@ -4,7 +4,9 @@ import '../assets/styles/components/PageSelector.scss';
 
 const PageSelector = ({ actual, text, link, setEndPoint }) => {
   const changePage = () => {
-    setEndPoint(link);
+    if (text !== '...') {
+      setEndPoint(link);
+    }
   };
 
   return (
