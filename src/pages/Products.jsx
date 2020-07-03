@@ -12,7 +12,7 @@ const Products = ({ match }) => {
 
   return (
     <Section title={params.title}>
-      <ProductsSection productsPerPage={12} query={query} />
+      <ProductsSection title={params.title} productsPerPage={12} query={query} />
     </Section>
   );
 };

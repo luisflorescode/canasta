@@ -19,7 +19,7 @@ const useFetch = (url) => {
     const getData = async () => {
       try {
         setState({ data: null, loading: true, error: null });
-        const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+        const proxyUrl = process.env.REACT_APP_CORS_PROXY || '';
         const response = await fetch(proxyUrl + url);
         const data = await response.json();
 

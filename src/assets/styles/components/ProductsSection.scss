@@ -1,7 +1,7 @@
 @import '../main.scss';
 
 .products-section {
-  &__sorting {
+  &__filter, &__sorting {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -10,5 +10,37 @@
     max-width: calc(1440px * .92);
     margin: 15px auto;
     margin-bottom: 0;
+    color: $secondaryBlack-color;
+  }
+
+  &__filter {
+    &__flow {
+      &__link {
+        color: $secondaryBlack-color;
+        text-decoration: none;
+      }
+
+      &__category {
+        color: $primary-color;
+      }
+    }
+
+    &__button {
+      display: flex;
+      align-items: center;
+      padding: 5px 10px;
+      border: .5px solid $grey-color;
+      background-color: $white-color;
+      font-size: 14px;
+      cursor: pointer;
+      outline: none;
+
+      &__icon {
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+        fill: $primary-color;
+      }
+    }
   }
 }
