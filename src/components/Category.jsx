@@ -5,7 +5,7 @@ import '../assets/styles/components/Category.scss';
 import defaultImg from '../assets/static/images/default-category.png';
 
 const Category = ({ name, slug, photo }) => (
-  <Link to={`/${slug}`}>
+  <Link to={`/category/${name}/${slug}`}>
     <figure className="category">
       <img className="category__img" src={photo || defaultImg} alt={name} />
       <figcaption className="category__name">{name}</figcaption>
