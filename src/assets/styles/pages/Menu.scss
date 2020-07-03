@@ -1,0 +1,17 @@
+@import '../main.scss';
+
+.menu {
+  &__head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: $primary-color;
+    color: $white-color;
+
+    &__title {
+      margin: auto;
+      font-size: 35px;
+    }
+  }
+}

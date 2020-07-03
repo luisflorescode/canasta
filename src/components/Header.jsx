@@ -1,11 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../assets/styles/components/Header.scss';
 import { ReactComponent as Logo } from '../assets/static/icons/logo.svg';
 import { ReactComponent as SearchIcon } from '../assets/static/icons/search.svg';
 
 const Header = () => (
   <header className="header">
-    <Logo className="header__logo" />
+    <Link to="/">
+      <Logo className="header__logo" />
+    </Link>
     <form className="header__search">
       <input
         className="header__search__input"
