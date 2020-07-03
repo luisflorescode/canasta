@@ -1,0 +1,70 @@
+@import '../main.scss';
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid $grey-color;
+  background-color: $white-color;
+
+  &__photo {
+    width: 100%;
+    height: 41vw;
+    object-fit: cover;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 130px;
+    margin-top: 5px;
+
+    &__name {
+      margin: 0;
+      font-size: 16px;
+      font-weight: normal;
+    }
+
+    &__store {
+      font-size: 13px;
+      color: $secondaryBlack-color;
+    }
+
+    &__price {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .product {
+    width: 30%;
+
+    &__photo {
+      height: 28vw;
+    }
+
+    &__details {
+      height: 100px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .product {
+    width: 22.5%;
+
+    &__photo {
+      height: 21vw;
+    }
+
+    &__details {
+      height: 90px;
+    }
+  }
+}
+
