@@ -1,0 +1,40 @@
+@import '../main.scss';
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+
+  &__icon {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+  }
+
+  &__icon:after {
+    content: ' ';
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid $primary-color;
+    border-color: $primary-color transparent $primary-color transparent;
+    animation: loader__icon 1.2s linear infinite;
+  }
+
+  &__message {
+    margin-top: 1em;
+  }
+}
+
+@keyframes loader__icon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
