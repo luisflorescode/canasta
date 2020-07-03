@@ -17,11 +17,11 @@ const useFetch = (link) => {
 
   useEffect(() => {
     const getData = async () => {
-      setState({ data: null, loading: true, error: null });
-      const url = `${link}`;
-
       try {
-        const response = await fetch(url);
+        setState({ data: null, loading: true, error: null });
+        const url = `${link}`;
+        const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+        const response = await fetch(proxyUrl + url);
         const data = await response.json();
 
         if (isMounted.current) {

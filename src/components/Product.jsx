@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import '../assets/styles/components/Product.scss';
+import defaultProduct from '../assets/static/images/default-category.png';
 
 const Product = ({ photo, name, store, price }) => (
   <li className="product">
-    <img className="product__photo" src={photo} alt={name} />
+    <img className="product__photo" src={photo || defaultProduct} alt={name} />
     <div className="product__details">
       <h3 className="product__details__name">{name}</h3>
       <span className="product__details__store">{store}</span>
