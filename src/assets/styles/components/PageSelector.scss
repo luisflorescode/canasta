@@ -1,0 +1,15 @@
+@import '../main.scss';
+
+.page-selector {
+  margin: 0 5px;
+
+  &__text:hover {
+    cursor: pointer;
+    color: $primary-color;
+  }
+
+  &__text--actual {
+    color: $primary-color;
+    font-weight: bold;
+  }
+}

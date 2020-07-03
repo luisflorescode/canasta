@@ -5,7 +5,7 @@ import Loader from './Loader';
 import Error from './Error';
 
 const CategoriesList = () => {
-  const { data, loading, error } = useFetch('/categories');
+  const { data, loading, error } = useFetch(`${process.env.REACT_APP_API}/categories`);
 
   return (
     <>

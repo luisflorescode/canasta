@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 
-const useFetch = (query) => {
+const useFetch = (link) => {
   const isMounted = useRef(true);
   const [state, setState] = useState({
     data: null,
@@ -18,7 +18,7 @@ const useFetch = (query) => {
   useEffect(() => {
     const getData = async () => {
       setState({ data: null, loading: true, error: null });
-      const url = `${process.env.REACT_APP_API}${query}`;
+      const url = `${link}`;
 
       try {
         const response = await fetch(url);
@@ -41,7 +41,7 @@ const useFetch = (query) => {
     };
 
     getData();
-  }, [query]);
+  }, [link]);
 
   return state;
 };
