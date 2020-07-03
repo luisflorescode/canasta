@@ -1,0 +1,46 @@
+@import '../main.scss';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 15px;
+  background-color: $grey-color;
+
+  &__search {
+    display: flex;
+    align-items: center;
+
+    &__input {
+      width: 200px;
+      height: 35px;
+      padding: 0 10px;
+      border-radius: 15px;
+      border: 1px solid $secondaryBlack-color;
+      outline: none;
+
+      &:focus {
+        border-color: $primary-color;
+      }
+    }
+
+    &__button {
+      width: 25px;
+      height: 25px;
+      margin-left: 5px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      
+      &__icon {
+        width: 25px;
+        height: 25px;
+        fill: $secondaryBlack-color;
+      }
+      &:hover &__icon {
+        fill: $primary-color;
+      }
+    }
+  }
+}
